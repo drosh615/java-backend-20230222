@@ -1,0 +1,16 @@
+package chapter1.A_Variable;
+
+// 이 뒤로 한 줄 주석
+/* 이 사이를 부분 주석 */
+/*
+ * /*+ 엔터를하면 자동. 여러줄 주석
+ */
+//내용을 쓰고 컨트롤 + / 를 누르면 자동 주석
+
+public class Variable {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

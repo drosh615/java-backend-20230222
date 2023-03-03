@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+D:\hankk\javabasic\.metadata\.plugins\org.eclipse.jdt.core
+54703828.index
+3040126114.index
+1644170942.index
+1865797976.index

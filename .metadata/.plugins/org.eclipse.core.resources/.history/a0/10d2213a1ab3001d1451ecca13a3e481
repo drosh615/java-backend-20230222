@@ -1,0 +1,10 @@
+package chapter1.D_IO;
+
+// 입출력
+public class Io {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
