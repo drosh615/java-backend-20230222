@@ -1,9 +1,0 @@
-package chapter1.B_Constant;
-
-public class Constant {
-
-	public static void main(String[] args) {
-		
-	}
-
-}
