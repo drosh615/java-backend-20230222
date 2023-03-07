@@ -8,4 +8,9 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="chapter3.F_Overriding.Human"/>
     <fullyQualifiedTypeName name="chapter4.A_AccessModifier.Example4"/>
+    <fullyQualifiedTypeName name="chapter4.B_Polymorphism.SuperClass"/>
+    <fullyQualifiedTypeName name="chapter4.B_Polymorphism.SubClass1"/>
+    <fullyQualifiedTypeName name="chapter4.B_Polymorphism.SubClass2"/>
+    <fullyQualifiedTypeName name="chapter4.C_AbstractClass.Abstract"/>
+    <fullyQualifiedTypeName name="chapter4.D_Interface.Implements"/>
 </qualifiedTypeNameHistroy>

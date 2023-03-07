@@ -54,5 +54,6 @@ public class Modifier {
 		Example4 example4 = new Example4();
 		example4.number4 =10;
 		example4.function4();
+	}
 
 }
