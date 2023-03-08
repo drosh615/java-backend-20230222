@@ -25,7 +25,8 @@ public class ExchangeRate {
 	
 	@Override
 	public String toString() {
-		return "ExchangeRate [exchangingCurrency=" + exchangingCurrency + ", exchangedCurrency=" + exchangedCurrency
+		return "ExchangeRate [exchangingCurrency=" + exchangingCurrency + 
+				", exchangedCurrency=" + exchangedCurrency
 				+ ", exchangeRate=" + exchangeRate + "]";
 	}
 
