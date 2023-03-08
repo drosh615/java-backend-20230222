@@ -13,4 +13,5 @@
     <fullyQualifiedTypeName name="chapter4.B_Polymorphism.SubClass2"/>
     <fullyQualifiedTypeName name="chapter4.C_AbstractClass.Abstract"/>
     <fullyQualifiedTypeName name="chapter4.D_Interface.Implements"/>
+    <fullyQualifiedTypeName name="chapter4.Example.ExchangeRate"/>
 </qualifiedTypeNameHistroy>
