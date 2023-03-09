@@ -29,13 +29,23 @@ public class ExchangeApplication {
 	public static void main(String[] args) {
 		//입력과정
 		Scanner scanner = new Scanner(System.in);
+		String exchangingCurrency =null;
+		String exchangedCurrency = null;
+		int amount = 0;
+		try {
+			System.out.println("넣을 화폐 : ");
+			exchangingCurrency = scanner.nextLine();
+			System.out.println("바꿀 화폐 : ");
+			exchangedCurrency = scanner.nextLine();
+			System.out.println("금액 : ");
+			amount = scanner.nextInt();
+		} catch (Exception exception) {
+			//exception.printStackTrace();
+			System.out.println("입력값이 타입이 맞지 않습니다.");
+			return;
+		}
 		
-		System.out.println("넣을 화폐 : ");
-		String exchangingCurrency = scanner.nextLine();
-		System.out.println("바꿀 화폐 : ");
-		String exchangedCurrency = scanner.nextLine();
-		System.out.println("금액 : ");
-		int amount = scanner.nextInt();
+		
 		
 		//입력검증
 		//모두 입력을 했는지
