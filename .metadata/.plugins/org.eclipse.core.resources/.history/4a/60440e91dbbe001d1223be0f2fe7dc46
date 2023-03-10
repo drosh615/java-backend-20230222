@@ -1,0 +1,13 @@
+package chapter5.D_EtcClass;
+
+/*
+ * Timer - TimerTask
+ * 특정 작업을 지연시킬때 사용
+ */
+public class EtcClass {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -2,10 +2,12 @@ package chapter5.C_DateTime;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 
 /*
@@ -75,6 +77,32 @@ public class DateTime {
 		LocalDateTime localDateTimeOf = LocalDateTime.of(localDateOf,localTimeOf);
 		System.out.println(localDateTimeOf);
 		
+		/*
+		 * .getxxx()
+		 * 특정 날짜 혹은 시간 가져오기
+		 */
+		int year = localDateTime.getYear();
+		int month = localDateTime.getMonthValue();
+		int hour = localDateTime.getHour();
+		int minute = localDateTime.getMinute();
+		int second = localDateTime.getSecond();
+		int nano = localDateTime.getNano();
+		
+		int dayOfYear = localDateTime.getDayOfYear();
+		int dayOfMonth = localDateTime.getDayOfMonth();
+		
+		DayOfWeek dayOfWeek = localDateTime.getDayOfWeek();
+		
+		boolean isLeapYeae = localDate.isLeapYear();
+		
+		/*
+		 * 특정 날찌 및 시간 변경
+		 * 직접변경: withxxx(int타입 데이터);
+		 * 더하기/빼기 : plusxxx(long타입) minusxxx(long타입)
+		 */
+		localDateTime = localDateTime.withYear(2012).plusWeeks(4).minusHours(9);
+		Instant instant = localDateTime.atZone(ZoneId.systemDefault()).toInstant();
+			
 		
 	}
 
