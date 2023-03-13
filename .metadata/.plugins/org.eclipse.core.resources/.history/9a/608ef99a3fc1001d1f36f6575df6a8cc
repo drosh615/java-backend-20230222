@@ -1,0 +1,14 @@
+package trainReservation.entity;
+
+import java.util.List;
+
+// 기차 정보 Entity Class
+public class Train {
+	String trainNumber;
+	String departureTime;
+	String arrivalTime;
+	int takeMinute;
+	String type;
+	List<StopStation> stopStation;
+	//남아있는 좌석 (class - 호차, 좌석번호, 좌석 상태)
+}

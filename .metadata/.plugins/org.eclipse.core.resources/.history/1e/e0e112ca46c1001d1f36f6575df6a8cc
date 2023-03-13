@@ -1,0 +1,43 @@
+package trainReservation;
+
+import java.util.List;
+
+import trainReservation.entity.Cost;
+import trainReservation.entity.Train;
+
+/*
+ * 기차정보
+ * 열차번호, 출발시간, 도착시간, 걸리는시간, 기차종류, 비용, 정차역, 남아있는 좌석
+ * 
+ * 예약정보
+ * 이름, 좌석번호, 예약번호, 출발역, 도착역, 출발시간, 도착시간
+ */
+public class MainApplication {
+	
+	private static List<Train> trains;
+	private static List<Cost> costs;
+
+	public static void main(String[] args) {
+		System.out.println("run test");
+	}
+
+	private void initDate() {
+		costs.add(new Cost("부산역", "서울역", 30000));
+		costs.add(new Cost("부산역", "대전역", 20000));
+		costs.add(new Cost("부산역", "대구역", 10000));
+		costs.add(new Cost("대구역", "서울역", 20000));
+		costs.add(new Cost("대구역", "대전역", 10000));
+		costs.add(new Cost("대전역", "서울역", 10000));
+		
+		costs.add(new Cost("서울역", "부산역", 30000));
+		costs.add(new Cost("대전역", "부산역", 20000));
+		costs.add(new Cost("대구역", "부산역", 10000));
+		costs.add(new Cost("서울역", "대구역", 20000));
+		costs.add(new Cost("대전역", "대구역", 10000));
+		costs.add(new Cost("서울역", "대전역", 10000));
+		
+		Train train;
+		train = new Train("KTX001", "서울역", "06:00", "부산역", "9:00", 180, "KTX");
+		trains.add(null);
+	}
+}

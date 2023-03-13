@@ -1,0 +1,8 @@
+package trainReservation.entity;
+
+//비용 Entity Class
+public class Cost {
+	private String departureStation;
+	private String arrivalStation;
+	private int amount;
+}

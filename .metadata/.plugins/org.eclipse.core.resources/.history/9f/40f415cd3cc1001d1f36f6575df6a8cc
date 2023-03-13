@@ -1,0 +1,9 @@
+package trainReservation.entity;
+
+// 기차 정보 Entity Class
+public class Train {
+	String trainNumber;
+	String departureTime;
+	String arrivalTime;
+	
+}
