@@ -1,0 +1,11 @@
+package trainReservation.service;
+
+import java.util.List;
+
+import trainReservation.entity.Train;
+
+public class ReservationService {
+	public List<Train> getPossibleTrainList() {
+		
+	}
+}

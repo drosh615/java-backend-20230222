@@ -1,0 +1,5 @@
+package trainReservation.service;
+
+public class ReservationService {
+
+}
