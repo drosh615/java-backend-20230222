@@ -75,7 +75,7 @@ public class MainApplication {
 					LocalTime stationDepartureTime = LocalTime.parse(dto.getDepartureStation(), timeFormatter);
 					
 					if (stationDepartureTime.isBefore(departureTime)) {
-						break;	//이미 지나간 열차 
+						break;
 					}
 					
 					sameStationIndex = stopStationIndex;
@@ -85,7 +85,6 @@ public class MainApplication {
 					continue;
 				}
 				
-				// 출발할 역 이후에 도착할 역이 있는지 확인
 				for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
 					String stationName = stopStations.get(stopStationIndex).getStationName();
 					
@@ -94,7 +93,7 @@ public class MainApplication {
 					}
 					
 					if (stopStationIndex <= sameStationIndex) {
-						break;	//열차 방향이 다름
+						break;
 					}
 					
 					possibleTrains.add(train);
@@ -105,7 +104,7 @@ public class MainApplication {
 			
 			
 			//시스템 출력 확인은 정확한 단계를 소화했는지 점검하는 것이다.
-			System.out.println(possibleTrains.toString());
+			//System.out.println(dto.toString());
 		}
 	}
 

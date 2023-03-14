@@ -33,7 +33,7 @@ public class MainApplication {
 			
 			LocalTime departureTime = null;
 			
-			// 입력 검증
+			//검증
 			if (dto.isEmpty()) {
 				System.out.println("모두 입력하세요.");
 				continue;
@@ -42,7 +42,7 @@ public class MainApplication {
 			try {
 				LocalTime.parse(dto.getDepartureTime(), timeFormatter);
 			} catch(Exception exception) {
-				System.out.println("잘못된 시간입니다. 'HH:mm'형식으로 작성해주세요");
+				System.out.println("잘못된 시간입니다");
 				continue;
 			}
 			
@@ -56,26 +56,22 @@ public class MainApplication {
 				continue;
 			}
 			
-			// 받아올 내용 생성
 			List<Train> possibleTrains = new ArrayList<>();
 			
-			// 검색
 			for (Train train: trains) {
-				List<StopStation> stopStations = train.getStopStation();
-				// 
+				List<StopStation> stopStation = train.getStopStation();
 				int sameStationIndex = -1;
 				
-				for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
-					String stopStationName = stopStations.get(stopStationIndex).getStationName();
+				for (int stopStationIndex = 0; stopStationIndex < stopStation.size(); stopStationIndex++) {
+					String stopStationName = stopStation.get(stopStationIndex).getStationName();
 					if(!dto.getDepartureStation().equals(stopStationName)) {
 						continue;
 					}
 					
-					// 이미 출발한 열차인지 아닌지 확인하기 위한
 					LocalTime stationDepartureTime = LocalTime.parse(dto.getDepartureStation(), timeFormatter);
 					
 					if (stationDepartureTime.isBefore(departureTime)) {
-						break;	//이미 지나간 열차 
+						break;
 					}
 					
 					sameStationIndex = stopStationIndex;
@@ -85,7 +81,6 @@ public class MainApplication {
 					continue;
 				}
 				
-				// 출발할 역 이후에 도착할 역이 있는지 확인
 				for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
 					String stationName = stopStations.get(stopStationIndex).getStationName();
 					
@@ -94,7 +89,7 @@ public class MainApplication {
 					}
 					
 					if (stopStationIndex <= sameStationIndex) {
-						break;	//열차 방향이 다름
+						break;
 					}
 					
 					possibleTrains.add(train);
@@ -105,7 +100,7 @@ public class MainApplication {
 			
 			
 			//시스템 출력 확인은 정확한 단계를 소화했는지 점검하는 것이다.
-			System.out.println(possibleTrains.toString());
+			//System.out.println(dto.toString());
 		}
 	}
 

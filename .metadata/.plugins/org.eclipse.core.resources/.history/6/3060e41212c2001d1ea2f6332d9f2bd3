@@ -105,7 +105,7 @@ public class MainApplication {
 			
 			
 			//시스템 출력 확인은 정확한 단계를 소화했는지 점검하는 것이다.
-			System.out.println(possibleTrains.toString());
+			//System.out.println(dto.toString());
 		}
 	}
 

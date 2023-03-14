@@ -81,7 +81,7 @@ public class GetTrainListDto {
 		return this.getDepartureStation().equals(this.getArrivalStation());
 	}
 	
-	public boolean isEqualDepartureStation(String station) {
+	public boolean isEqualDepartureStation() {
 		return this.departureStation.equals(station);
 	}
 	
