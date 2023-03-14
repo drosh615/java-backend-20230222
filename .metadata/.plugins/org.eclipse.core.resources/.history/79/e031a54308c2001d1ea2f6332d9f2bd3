@@ -71,24 +71,6 @@ public class GetTrainListDto {
 				+ ", 출발시간=" + departureTime + ", 인원=" + numberOfPeople + "]";
 	}
 	
-	public boolean isEmpty() {
-		return this.departureStation.isBlank() || 
-				this.arrivalStation.isBlank() || 
-				this.departureTime.isBlank();
-	}
 	
-	public boolean isEqualStation() {
-		return this.getDepartureStation().equals(this.getArrivalStation());
-	}
+	
 }
-
-
-
-
-
-
-
-
-
-
-

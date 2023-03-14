@@ -72,14 +72,9 @@ public class GetTrainListDto {
 	}
 	
 	public boolean isEmpty() {
-		return this.departureStation.isBlank() || 
-				this.arrivalStation.isBlank() || 
-				this.departureTime.isBlank();
+		return this.departureStation.isBlank() || this.arrivalStation.isBlank() || this.departureTime.isBlank();
 	}
 	
-	public boolean isEqualStation() {
-		return this.getDepartureStation().equals(this.getArrivalStation());
-	}
 }
 
 

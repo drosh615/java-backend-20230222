@@ -27,10 +27,9 @@ public class MainApplication {
 	
 	public static void main(String[] args) {
 		initDate();
-
+		
 		while (true) {
-			GetTrainListDto dto = new GetTrainListDto(); 
-			
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
 			LocalTime departureTime = null;
 			
 			//검증

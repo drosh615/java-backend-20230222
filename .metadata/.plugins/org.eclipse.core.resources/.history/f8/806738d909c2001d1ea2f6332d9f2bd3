@@ -1,6 +1,5 @@
 package trainReservation;
 
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,11 +26,12 @@ public class MainApplication {
 	
 	public static void main(String[] args) {
 		initDate();
-
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+		LocalTime
+		
 		while (true) {
 			GetTrainListDto dto = new GetTrainListDto(); 
-			
-			LocalTime departureTime = null;
 			
 			//검증
 			if (dto.isEmpty()) {
@@ -40,10 +40,9 @@ public class MainApplication {
 			}
 			
 			try {
-				LocalTime.parse(dto.getDepartureTime(), timeFormatter);
+				
 			} catch(Exception exception) {
-				System.out.println("잘못된 시간입니다");
-				continue;
+				
 			}
 			
 			if (dto.getNumberOfPeople() <= 0) {
@@ -56,10 +55,6 @@ public class MainApplication {
 				continue;
 			}
 			
-			List<Train> possibleTrains = new ArrayList<>();
-			for (Train train: trains) {
-				
-			}
 			
 			
 			//시스템 출력 확인은 정확한 단계를 소화했는지 점검하는 것이다.

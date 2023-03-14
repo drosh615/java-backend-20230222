@@ -27,11 +27,12 @@ public class MainApplication {
 	
 	public static void main(String[] args) {
 		initDate();
-
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+		LocalTime departureTime = null;
+		
 		while (true) {
 			GetTrainListDto dto = new GetTrainListDto(); 
-			
-			LocalTime departureTime = null;
 			
 			//검증
 			if (dto.isEmpty()) {

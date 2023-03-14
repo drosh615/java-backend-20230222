@@ -1,7 +1,5 @@
 package trainReservation;
 
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -23,26 +21,15 @@ public class MainApplication {
 	
 	private static List<Train> trains = new ArrayList<Train>();
 	private static List<Cost> costs = new ArrayList<Cost>();
-	private static DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-	
+
 	public static void main(String[] args) {
 		initDate();
-
 		while (true) {
 			GetTrainListDto dto = new GetTrainListDto(); 
 			
-			LocalTime departureTime = null;
-			
 			//검증
-			if (dto.isEmpty()) {
+			if(dto.isEmpty()) {
 				System.out.println("모두 입력하세요.");
-				continue;
-			}
-			
-			try {
-				LocalTime.parse(dto.getDepartureTime(), timeFormatter);
-			} catch(Exception exception) {
-				System.out.println("잘못된 시간입니다");
 				continue;
 			}
 			
@@ -56,10 +43,6 @@ public class MainApplication {
 				continue;
 			}
 			
-			List<Train> possibleTrains = new ArrayList<>();
-			for (Train train: trains) {
-				
-			}
 			
 			
 			//시스템 출력 확인은 정확한 단계를 소화했는지 점검하는 것이다.
