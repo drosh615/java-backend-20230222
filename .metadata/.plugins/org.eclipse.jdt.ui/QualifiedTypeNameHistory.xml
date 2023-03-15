@@ -41,7 +41,6 @@
     <fullyQualifiedTypeName name="chapter6.B_Generic.GenericClass"/>
     <fullyQualifiedTypeName name="trainReservation.entity.Cost"/>
     <fullyQualifiedTypeName name="trainReservation.entity.Seat"/>
-    <fullyQualifiedTypeName name="trainReservation.entity.StopStation"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="trainReservation.entity.Train"/>
     <fullyQualifiedTypeName name="trainReservation.dto.GetTrainListDto"/>
@@ -49,7 +48,9 @@
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.time.LocalTime"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="trainReservation.service.ReservationService"/>
     <fullyQualifiedTypeName name="trainReservation.controller.ReservationController"/>
+    <fullyQualifiedTypeName name="trainReservation.entity.StopStation"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="trainReservation.entity.ReservationInfo"/>
 </qualifiedTypeNameHistroy>

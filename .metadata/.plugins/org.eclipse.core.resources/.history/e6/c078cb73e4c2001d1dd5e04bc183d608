@@ -33,7 +33,7 @@ public class ReservationService {
 		
 		for (Train train: trains) {
 			
-			List<StopStation> stopStations = train.getStopStation();
+			List<StopStation> stopStations = train.getStopStations();
 			int sameStationIndex = -1;
 			
 			for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
@@ -134,7 +134,7 @@ public class ReservationService {
 		String departureTime = "";
 		String arrivalTime = "";
 		
-		for (StopStation stopStation: train.getStopStation()) {
+		for (StopStation stopStation: train.getStopStations()) {
 			boolean isEqualDepartureStation =
 					getTrainListDto.isEqualDepartureStation(stopStation.getStationName());
 			boolean isEqualArrivalStation = 

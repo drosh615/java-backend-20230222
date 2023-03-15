@@ -1,8 +1,0 @@
-package chapter4.Example;
-
-/*
- * 화폐 : 화폐 = 환율
- */
-public class ExchangeRate {
-
-}
