@@ -1,0 +1,9 @@
+package trainReservation.dto;
+
+public class GetReservationDto {
+	private String reservationnumber;
+	public GetReservationDto() {}
+	
+	
+	
+}

@@ -1,0 +1,16 @@
+package board.entity;
+
+//회원(회원관리)
+//-로그인 _ 이메일 주소/ 비밀번호
+//-회원가입_이메일 주소/ 비밀번호/ 닉네임/ 핸드폰 번호/ 상세주소
+//-마이페이지_ 프로필사진/닉네임/이메일
+//->이메일주소(사람을 구분하는 역할)[문자열]
+///비밀번호[문자열] /비밀번호확인[문자열] /닉네임[문자열] /
+//핸드폰 번호[문자열] / 주소[문자열] /상세주소[문자열] / 프로필사진[문자열]
+
+public class User {
+	private String email;
+	private String password;
+	private String passwordCheck;
+	private String nickname;
+}

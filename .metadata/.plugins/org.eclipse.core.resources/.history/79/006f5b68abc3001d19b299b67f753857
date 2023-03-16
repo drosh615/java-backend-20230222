@@ -1,0 +1,21 @@
+package board.entity;
+
+import java.util.Date;
+
+//댓글 리스트_  
+//(댓글 작성자 이메일)/ 댓글 작성자 프로필사진[문자열]/ 
+//댓글 작성자 닉네임[문자열] /댓글 작성 날짜 및 시간[날짜] / 댓글 내용[문자열] 
+
+
+public class Comment {
+	private String writerprofileImageUrl;
+	private String writerNickname;
+	private Date writeDatetime;
+	private String content;
+	
+	public Comment() {
+		
+	}
+	
+	
+}

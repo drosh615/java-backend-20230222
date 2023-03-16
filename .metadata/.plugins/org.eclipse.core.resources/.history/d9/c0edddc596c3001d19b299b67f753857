@@ -1,0 +1,30 @@
+package trainReservation.dto;
+
+import java.util.Scanner;
+
+public class GetReservationDto {
+	private String reservationnumber;
+	
+	public GetReservationDto() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("예약 번호 : ");
+		this.reservationnumber = scanner.nextLine();
+	}
+	
+	public GetReservationDto(String reservationnumber) {
+		this.reservationnumber = reservationnumber;
+	}
+	
+	public String getReservationnumber() {
+		return reservationnumber;
+	}
+	public void setReservationnumber(String reservationnumber) {
+		this.reservationnumber = reservationnumber;
+	}
+	
+	@Override
+	public String toString() {
+		return "GetReservationDto [reservationnumber=" + reservationnumber + "]";
+	}
+
+}

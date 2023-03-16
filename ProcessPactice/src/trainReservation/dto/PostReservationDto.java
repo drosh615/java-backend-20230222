@@ -15,7 +15,7 @@ public class PostReservationDto {
 		this.steats = new ArrayList<>();
 		
 		while (true) {
-			System.out.println("탑승할 열차 번호 : ");
+			System.out.print("탑승할 열차 번호 : ");
 			this.trainNumber = scanner.nextLine();
 			
 			if (this.trainNumber.isBlank()) {
@@ -26,7 +26,7 @@ public class PostReservationDto {
 		}
 		
 		while (this.steats.size() < numberOfPeople) {
-			System.out.println("좌석 번호 : ");
+			System.out.print("좌석 번호 : ");
 			String seat = scanner.nextLine();
 			
 			if (seat.isBlank()) {

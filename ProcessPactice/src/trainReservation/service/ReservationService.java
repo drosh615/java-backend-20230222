@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import trainReservation.dto.GetReservationDto;
 import trainReservation.dto.GetTrainListDto;
 import trainReservation.dto.PostReservationDto;
 import trainReservation.entity.Cost;
@@ -156,6 +157,26 @@ public class ReservationService {
 		
 		reservations.add(reservationInfo);
 
+		return reservationInfo;
+		
+	}
+	
+	public ReservationInfo getReservation(GetReservationDto dto) {
+		
+		ReservationInfo reservationInfo = null;
+		String reservationNumber = dto.getReservationNumber();
+		
+		for (ReservationInfo item: reservations) {
+			
+			boolean isEqualReservationNumber =
+					reservationNumber.equals(item.getReservationNumber());
+			if (!isEqualReservationNumber) continue;
+			
+			reservationInfo = item;
+			break;
+			
+		}
+		
 		return reservationInfo;
 		
 	}

@@ -1,0 +1,24 @@
+package trainReservation.dto;
+
+public class GetReservationDto {
+	private String reservationnumber;
+	
+	public GetReservationDto() {}
+	
+	public GetReservationDto(String reservationnumber) {
+		this.reservationnumber = reservationnumber;
+	}
+	
+	public String getReservationnumber() {
+		return reservationnumber;
+	}
+	public void setReservationnumber(String reservationnumber) {
+		this.reservationnumber = reservationnumber;
+	}
+	
+	@Override
+	public String toString() {
+		return "GetReservationDto [reservationnumber=" + reservationnumber + "]";
+	}
+
+}
