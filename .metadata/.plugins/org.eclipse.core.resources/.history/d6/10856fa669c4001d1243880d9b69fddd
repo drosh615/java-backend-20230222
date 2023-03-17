@@ -1,0 +1,5 @@
+package board.common.constant;
+
+public interface ResponseMessge {
+	public static final String SUCCESS = "Success";
+}

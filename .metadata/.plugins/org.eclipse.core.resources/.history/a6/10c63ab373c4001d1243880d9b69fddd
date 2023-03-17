@@ -1,0 +1,7 @@
+package board.repository;
+
+import java.util.List;
+
+public class BoardRepository {
+	private static List<Board> boardTable =
+}
