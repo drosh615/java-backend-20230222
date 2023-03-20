@@ -1,0 +1,9 @@
+package board.dto.response.board;
+
+public class GetBoardResponseDto {
+	private String title;
+	private String content;
+	private String boardImageUrl;
+	private String writerProfileImageUrl;
+	
+}

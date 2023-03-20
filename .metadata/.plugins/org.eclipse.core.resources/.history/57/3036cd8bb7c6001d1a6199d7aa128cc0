@@ -1,0 +1,8 @@
+package board.dto.request.board;
+
+public class PostboardDto {
+	private String title;
+	private String content;
+	private String boardImageUrl;
+	private String writerEmail;
+}

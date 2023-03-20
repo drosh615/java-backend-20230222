@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;board.dto.request.board.PostboardDto&apos; to &apos;PostBoardDto&apos;&#x0D;&#x0A;- Original project: &apos;ProcessPactice&apos;&#x0D;&#x0A;- Original element: &apos;board.dto.request.board.PostboardDto&apos;&#x0D;&#x0A;- Renamed element: &apos;board.dto.request.board.PostBoardDto&apos;&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PostboardDto&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;board.dto.request.board{PostboardDto.java[PostboardDto" matchStrategy="1" name="PostBoardDto" qualified="false" references="false" similarDeclarations="false" stamp="1679277156683" textual="false" version="1.0"/>
+</session>

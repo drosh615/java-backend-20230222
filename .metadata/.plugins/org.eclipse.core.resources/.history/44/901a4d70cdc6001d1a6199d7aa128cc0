@@ -1,0 +1,14 @@
+package board.dto.response.board;
+
+import java.util.List;
+
+public class GetBoardResponseDto {
+	private String title;
+	private String content;
+	private String boardImageUrl;
+	private String writerProfileImageUrl;
+	private String writerNickname;
+	private String writerDate;
+	private int likeCount;
+	private List<like> likeList;
+}

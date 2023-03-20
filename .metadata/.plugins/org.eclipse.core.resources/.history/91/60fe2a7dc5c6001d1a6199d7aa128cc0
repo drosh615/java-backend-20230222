@@ -1,0 +1,12 @@
+package board.dto.response.board;
+
+public class GetBoardListResponseDto {
+	private String writerProfileImageUrl;
+	private String writerNickname;
+	private String writerDate;
+	private String title;
+	private String content;
+	private int commentCount;
+	private int likeCount;
+	private int viewCount;
+}
