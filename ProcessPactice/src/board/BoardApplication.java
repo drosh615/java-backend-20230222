@@ -5,6 +5,7 @@ import java.util.Scanner;
 import board.common.constant.HttpStatus;
 import board.controller.BoardController;
 import board.controller.UserController;
+import board.dto.request.board.PatchBoardDto;
 import board.dto.request.board.PostBoardDto;
 import board.dto.request.user.SignInDto;
 import board.dto.request.user.SignUpDto;
@@ -18,6 +19,7 @@ public class BoardApplication {
 	
 	private static final String SIGN_UP = "POST /sign-up";
 	private static final String SIGN_IN = "POST /sign-in";
+	
 	private static final String POST_BOARD = "POST /board";
 	
 	private static final String GET_BOARD = "GET /board";
@@ -26,7 +28,6 @@ public class BoardApplication {
 	private static final String PATCH_BOARD = "PATCH /board";
 	
 	private static final String DELETE_BOARD = "DELETE /board";
-	
 	
 	public static void main(String[] args) {
 		
@@ -86,29 +87,69 @@ public class BoardApplication {
 				
 				boardController.postBoard(postBoardDto);
 				break;
-			
-			case GET_BOARD_LIST:
+				
+			case GET_BOARD_LIST: 
+				
 				boardController.getBoardList();
 				break;
 				
 			case GET_BOARD:
-				int boardNumber =0;
+				int boardNumber = 0;
 				try {
-					System.out.println("계시물 번호 : ");
+					System.out.print("게시물 번호 : ");
 					boardNumber = scanner.nextInt();
-					break;
-				} catch (Exception  exception) {
+				} catch (Exception exception) {
 					exception.printStackTrace();
 					continue;
 				}
 				boardController.getBoard(boardNumber);
-				
+				break;
+			case PATCH_BOARD:
+				patchBoard();
+				break;
+			case DELETE_BOARD:
+				int deleteBoardNumber = 0;
+				String deleteEmail = null;
+				try {
+					System.out.print("게시물 번호 : ");
+					deleteBoardNumber = Integer.parseInt(scanner.nextLine());
+					System.out.print("이메일 : ");
+					deleteEmail = scanner.nextLine();
+				} catch (Exception exception) {
+					exception.printStackTrace();
+					continue;
+				}
+				boardController.deleteBoard(deleteBoardNumber, deleteEmail);
+				break;
 			default:
 				System.out.println(HttpStatus.NOT_FOUND);
 			}
 			
 		}
 		
+	}
+	
+	private static void patchBoard() {
+		Scanner scanner = new Scanner(System.in);
+		try {
+			PatchBoardDto patchBoardDto = new PatchBoardDto();
+			
+			System.out.print("게시물 번호 : ");
+			String patchBoardNumber = scanner.nextLine();
+			patchBoardDto.setBoardNumber(Integer.parseInt(patchBoardNumber));
+			System.out.print("제목 : ");
+			patchBoardDto.setTitle(scanner.nextLine());
+			System.out.print("내용 : ");
+			patchBoardDto.setContent(scanner.nextLine());
+			System.out.print("이미지 : ");
+			patchBoardDto.setBoardImageUrl(scanner.nextLine());
+			System.out.print("이메일 : ");
+			patchBoardDto.setEmail(scanner.nextLine());
+			
+			boardController.patchBoard(patchBoardDto);
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
 	}
 
 }

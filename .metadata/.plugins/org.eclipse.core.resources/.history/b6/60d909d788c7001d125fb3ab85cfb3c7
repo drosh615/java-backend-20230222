@@ -1,0 +1,14 @@
+package board.dto.response.board;
+
+public class DeleteBoardResponseDto {
+	private int boardNumber;
+	private String writerProfileImageUrl;
+	private String writerNickname;
+	private String writerDate;
+	private String title;
+	private String content;
+	private String boardImageUrl;
+	private int commentCount;
+	private int likeCount;
+	private int viewCount;
+}
