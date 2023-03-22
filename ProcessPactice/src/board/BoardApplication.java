@@ -41,6 +41,7 @@ public class BoardApplication {
 			switch(endPoint) {
 			
 			case SIGN_UP:
+				
 				SignUpDto signUpDto = new SignUpDto();
 				System.out.print("이메일 주소 : ");
 				signUpDto.setEmail(scanner.nextLine());

@@ -1,0 +1,13 @@
+package test;
+
+import java.time.format.DateTimeFormatter;
+
+public class MainApplication {
+	private static Guest guest = new Guest();
+	private static DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("yyyy. MM. dd");
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

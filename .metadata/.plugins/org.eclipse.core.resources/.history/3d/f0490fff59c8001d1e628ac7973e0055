@@ -1,0 +1,11 @@
+package test;
+
+
+public class GuestInfoDto {
+	private String name;
+	private String gender;
+	private String address;
+	private String phoneNumber;
+	private String marketingCheck;
+	private String consentCollectInfo;
+}

@@ -1,0 +1,27 @@
+package test;
+
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class MainApplication {
+	private static Guest guest = new Guest();
+	private static DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("yyyy. MM. dd");
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		Guest guest = new Guest();
+		System.out.print("이름 : ");
+		guest.setName(scanner.nextLine());
+		System.out.print("성별 : ");
+		guest.setGender(scanner.nextLine());
+		System.out.print("주소 : ");
+		guest.setAddress(scanner.nextLine());
+		System.out.print("전화번호 : ");
+		guest.setPhoneNumber(scanner.nextLine());
+		System.out.print("마케팅 수신 여부(Yes/No) : ");
+		guest.setName(scanner.nextLine());
+		System.out.print("개인정보 수집 동의 여부(Yes/No) : ");
+		guest.setName(scanner.nextLine());
+	}
+}
