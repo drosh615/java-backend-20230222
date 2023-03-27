@@ -1,6 +1,0 @@
-package board.dto.request.user;
-
-public class SignInDto {
-	private String email;
-	private String password;
-}
