@@ -1,5 +1,5 @@
 -- Namgu 테이블에서 전체 필드 검색
-SELECT * FROM Namgu;
+SELECT * FROM hotel.namgu;
 
 -- Namgu 테이블에서 구분, 세대수, 면적 필드 검색
 SELECT 구분, 세대수, 면적 FROM Namgu;
@@ -76,5 +76,23 @@ SELECT * FROM Namgu
 WHERE 인구수 >= 10000
 AND (18세이상인구수 <= 12000 OR 반 >= 100);
 
-SELECT * FROM Namgu
+-- Namgu 테이블에서
+-- 인구수가 10000명 이상이면서 18세이상인구가 12000명 이하이고 
+-- 반이 100이상인 레코드 중 전체 필드 검색
+SELECT * FROM hotel.namgu
 WHERE 인구수 >= 10000 AND 18세이상인구수 <= 12000 OR 반 >= 100;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,48 +1,72 @@
 -- 기차 예약 데이터베이스 생성
-create database train_reservation;
-use train_reservation;
+CREATE DATABASE train_reservation;
+USE train_reservation;
 
--- 가격 테이블 생성 
-create table Cost (
-	departure_station varchar(50) not null,
-    arriva_station varchar(50) not null,
-    amount int not null
+DROP TABLE Cost;
+
+-- 가격 테이블 생성
+CREATE TABLE Cost (
+	departure_station INT NOT NULL,
+    arrival_station INT NOT NULL,
+    amount INT NOT NULL
 );
 
-create table Train (
-	train_number varchar(10) primary key, -- not null unique 
-    departure_station varchar(50) not null,
-    departure_time TIME not null,
-    arrival_station varchar(50) not null,
-    arrival_time TIME not null,
-    take_minute TIME not null,
-    type varchar(10) not null
+CREATE TABLE Train (
+	train_number VARCHAR(10) PRIMARY KEY,
+    departure_station VARCHAR(50) NOT NULL,
+    departure_time TIME NOT NULL,
+    arrival_station VARCHAR(50) NOT NULL,
+    arrival_time TIME NOT NULL,
+    take_minute TIME NOT NULL,
+    type VARCHAR(10) NOT NULL
 );
 
-CREATE table Station (
-	station_number INT AUTO_INCREMENT primary key,
-    station_name varchar(50) not null,
-    address text not null unique,
-    tel_number varchar(15) not null unique
+CREATE TABLE Station (
+	station_number INT AUTO_INCREMENT PRIMARY KEY,
+	station_name VARCHAR(50) NOT NULL,
+    address VARCHAR(500) NOT NULL UNIQUE,
+    tel_number VARCHAR(15) NOT NULL UNIQUE
 );
 
-CREATE table Stop_station (
-	station_number INT not null,
-    train_number varchar(10) not null,
-    departure_time time not null,
-    arrival_time time not null
+CREATE TABLE STOP_STATION (
+	station_number INT NOT NULL,
+    train_number VARCHAR(10) NOT NULL,
+    departure_time TIME NOT NULL,
+    arrival_time TIME NOT NULL
 );
 
-CREATE table Seat (
-	seat_code varchar(5) primary key,
-	type varchar(10) not null,
-    seat_number varchar(2) not  null,
-    train_type varchar(10) not null
+CREATE TABLE SEAT (
+	seat_code VARCHAR(5) PRIMARY KEY,
+	type VARCHAR(10) NOT NULL,
+    seat_number VARCHAR(2) NOT NULL,
+    train_type VARCHAR(10) NOT NULL
 );
 
+ALTER TABLE Cost
+ADD CONSTRAINT cost_primary_key
+PRIMARY KEY (departure_station, arrival_station);
 
+ALTER TABLE Cost
+ADD CONSTRAINT cost_foreign_key_1
+FOREIGN KEY (departure_station)
+REFERENCES Station (station_number);
 
+ALTER TABLE Cost
+ADD CONSTRAINT cost_foreign_key_2
+FOREIGN KEY (arrival_station)
+REFERENCES Station (station_number);
 
+ALTER TABLE STOP_STATION
+ADD CONSTRAINT stop_station_primary_key
+PRIMARY KEY (station_number, train_number);
 
+ALTER TABLE STOP_STATION
+ADD CONSTRAINT stop_station_foreign_key_1
+FOREIGN KEY (station_number)
+REFERENCES STATION (station_number);
 
+ALTER TABLE STOP_STATION
+ADD CONSTRAINT stop_station_foreign_key_2
+FOREIGN KEY (train_number)
+REFERENCES TRAIN (train_number);
 
