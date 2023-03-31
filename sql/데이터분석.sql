@@ -1,5 +1,5 @@
 -- Namgu 테이블에서 전체 필드 검색
-SELECT * FROM hotel.namgu;
+SELECT * FROM Namgu;
 
 -- Namgu 테이블에서 구분, 세대수, 면적 필드 검색
 SELECT 구분, 세대수, 면적 FROM Namgu;
@@ -71,20 +71,37 @@ WHERE 통 >= 20 OR 반 <= 100;
 -- 인구수가 10000명 이상인 레코드중 
 -- 18세이상인구수 12000명 이하이거나 반이 100이상인
 -- 레코드의 전체 필드 검색
-
 SELECT * FROM Namgu
 WHERE 인구수 >= 10000
 AND (18세이상인구수 <= 12000 OR 반 >= 100);
 
 -- Namgu 테이블에서
--- 인구수가 10000명 이상이면서 18세이상인구가 12000명 이하이고 
--- 반이 100이상인 레코드 중 전체 필드 검색
-SELECT * FROM hotel.namgu
+-- 인구수가 10000명 이상이면서 18세이상인구수가 12000명 이하이고
+-- 반이 100이상인
+-- 레코드의 전체 필드 검색
+SELECT * FROM Namgu
 WHERE 인구수 >= 10000 AND 18세이상인구수 <= 12000 OR 반 >= 100;
 
+SELECT count(*), max(세대수), min(세대수)
+FROM Namgu
+WHERE 면적 = 1;
 
+SELECT 면적, count(*), max(세대수), min(세대수) 
+FROM Namgu
+GROUP BY 면적;
 
+SELECT 면적, count(*), max(세대수), min(세대수) 
+FROM Namgu
+GROUP BY 면적
+HAVING max(세대수) >= 5000
+ORDER BY 면적;
 
+-- Group By 되지 않은 필드는 Having에 사용 불가능
+SELECT 면적, count(*), max(세대수), min(세대수) 
+FROM Namgu
+GROUP BY 면적
+HAVING 세대수 >= 5000
+ORDER BY 면적;
 
 
 
