@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+</head>
+<body>
+    <!-- form 요소-->
+    <!-- 사용자로부터 입력을 받아 특정한 리소스로 요청을 보낼때 사용되는 요소-->
+    <form>
+        <input name="id" />
+        <input name="password" />
+        <button type="submit"> 로그인</button>
+    </form>
+    <br>
+
+    <!-- form 속성-->
+    <!-- action / method 속성-->
+    <!-- action : form을 제출할 때 어떠한 리소스로 제출할 것인지-->
+    <!-- method : form을 제출할 때 어떠한 방식(get, post)으로 제출할 것인지-->
+    <!-- get 방식: 데이터를 url에 담아서 전송. 리퀘스트 헤더에 담겨서-->
+    <!-- post 방식: 데이터를 숨겨서 전송. 리퀘스트 바디에 담겨서-->
+    <form action="http://naver.com" method="get">
+        <input name="data" />
+        <button type="submit">get 전송</button> 
+    </form>
+    <form action="http://naver.com" method="post">
+        <input name="data" />
+        <button type="submit">post 전송</button> 
+    </form>
+    <br>
+
+    <!-- form button-->
+    <form>
+        <input name="first" />
+        <input name="second" />
+        <button type="submit"> 제출</button>    <!-- submin: form을 action에 method 방싱으로 요청을 보내는 형식-->
+        <button type="reset"> 초기화</button>   <!-- reset: form의 intput value 들응ㄹ 초기값으로 변경-->
+    </form>
+    <br>
+
+    <!-- field set / legend 요소-->
+    <!-- form의 field 들을 그룹화 지어주는 요소-->
+    <!-- label 요소 -->
+    <!-- form의 요소에 라벨을 달아주는 요소-->
+    <!-- label요소의 for속성에 form의 요소의 id속성값을 지정하면 해당 label요소와 form의 요소가 연결-->
+    <form>
+        <fieldset>
+            <legend>예약정보</legend>
+            <label for="reservation">예약일</label>
+            <input type="date" id="reservation"/>
+        </fieldset>
+        <fieldset>
+            <legend>예약자 정보</legend>
+            <input />
+            <input />
+        </fieldset>
+    </form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
