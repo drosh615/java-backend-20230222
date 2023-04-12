@@ -1,3 +1,73 @@
-* {
-    margin: 0;
+/* 전체 폼의 스타일 */
+#join_form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* 가입 버튼의 스타일 */
+#join_form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #03c75a;
+    border: none;
+    cursor: pointer;
+}
+
+/* 회원가입 폼의 제목 스타일 */
+.join_title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 입력 필드의 스타일 */
+.int {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* 에러 메시지의 스타일 */
+.error_next_box {
+    display: none;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #f00;
+}
+
+/* 생년월일 입력 필드의 스타일 */
+.bir_wrap {
+    display: flex;
+}
+
+.bir_wrap .ps_box {
+    flex: 1;
+}
+
+.bir_wrap .ps_box input {
+    width: 100%;
+}
+
+.bir_mm {
+    margin-left: 10px;
+    width: 100px;
+}
+
+/* 기타 스타일 */
+.blind {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
