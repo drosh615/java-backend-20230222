@@ -1,4 +1,4 @@
-console.log('hello');
+console.log('hello ');
 
 // 변수
 var number11: number;
